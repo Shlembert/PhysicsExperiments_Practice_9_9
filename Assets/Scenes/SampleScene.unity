@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -232,6 +232,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1577989890}
     m_Modifications:
+    - target: {fileID: 1108457189542010053, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 3917847876333442184, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
       propertyPath: m_Name
       value: GoodBoy (1)
@@ -485,8 +489,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Mass
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
       propertyPath: m_Interpolate
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
@@ -499,7 +511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 305846621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BadGuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -675,7 +687,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.15
+  m_Radius: 0.2
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
@@ -693,7 +705,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &369328223
 MonoBehaviour:
@@ -707,9 +719,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07e847266c081414eb1599b9942cf116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  flyForce: 15
+  ckickForce: 5
   animator: {fileID: 2089967508}
   clip: {fileID: -203655887218126122, guid: b9c04f0843a7e5a4abbd804de15f8783, type: 3}
+  badGuyLayer:
+    serializedVersion: 2
+    m_Bits: 256
   badguys:
   - {fileID: 1660695816}
   - {fileID: 1633308273}
@@ -782,6 +798,18 @@ PrefabInstance:
     - target: {fileID: 2132325466829830593, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Mass
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
@@ -998,6 +1026,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1577989890}
     m_Modifications:
+    - target: {fileID: 1108457189542010053, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 3917847876333442184, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
       propertyPath: m_Name
       value: GoodBoy (2)
@@ -1379,6 +1411,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1577989890}
     m_Modifications:
+    - target: {fileID: 1108457189542010053, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 3917847876333442184, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
       propertyPath: m_Name
       value: GoodBoy (4)
@@ -1436,6 +1472,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1577989890}
     m_Modifications:
+    - target: {fileID: 1108457189542010053, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 3917847876333442184, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
       propertyPath: m_Name
       value: GoodBoy (3)
@@ -1565,6 +1605,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Mass
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
 --- !u!1 &1220621648
@@ -1653,6 +1705,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 369328223}
         m_TargetAssemblyTypeName: SupermenController, Assembly-CSharp
+        m_MethodName: ResetCharacters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 369328223}
+        m_TargetAssemblyTypeName: SupermenController, Assembly-CSharp
         m_MethodName: Fly
         m_Mode: 1
         m_Arguments:
@@ -1708,6 +1772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1577989890}
     m_Modifications:
+    - target: {fileID: 1108457189542010053, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 3917847876333442184, guid: f2b02ccb23bfc8b40bb5228981e70c84, type: 3}
       propertyPath: m_Name
       value: GoodBoy
@@ -1859,6 +1927,18 @@ PrefabInstance:
     - target: {fileID: 2132325466829830593, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Mass
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
@@ -2381,6 +2461,18 @@ PrefabInstance:
     - target: {fileID: 2132325466829830593, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Mass
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 4549897408259584301, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aacbef07ec57264984398d94272ae3c, type: 3}
