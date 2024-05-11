@@ -18,10 +18,14 @@ public class SupermenController : MonoBehaviour
     private CapsuleCollider _capsuleCollider;
 
     private Vector3 _startPosition; 
-
-    private Quaternion _startRotation; 
+    private Quaternion _startRotation;
 
     private void Start()
+    {
+        StartSup();
+    }
+
+    public void StartSup()
     {
         _startPosition = transform.position;
         _startRotation = transform.rotation;
